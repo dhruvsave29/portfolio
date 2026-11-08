@@ -38,7 +38,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
             <Magnetic className="w-full">
               <a
                 href={profile.resumePdf}
-                download="Sushmita_Dasari_Resume.pdf"
+                download="Dhruv_Save_Resume.pdf"
                 data-cursor="link"
                 className="glass flex min-h-12 w-full items-center justify-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:bg-white/15"
               >
@@ -99,6 +99,9 @@ export function ResumeSheet() {
         <div className="text-xs leading-relaxed text-mist sm:text-right">
           <a href={`mailto:${profile.email}`} className="block hover:text-bone">
             {profile.email}
+          </a>
+          <a href={`tel:${profile.phone.replace(/[^+\d]/g, '')}`} className="block hover:text-bone">
+            {profile.phone}
           </a>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone">
             LinkedIn ↗

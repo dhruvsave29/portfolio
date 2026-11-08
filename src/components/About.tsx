@@ -4,10 +4,10 @@ import { EASE, SectionHeading, Tilt } from './fx';
 
 export default function About() {
   const facts = [
-    { k: 'Now', v: 'B.Tech, AI & ML', s: `${education[0].school} · ${education[0].score}` },
-    { k: 'Training', v: `${experience[0].role}, ${experience[0].company}`, s: experience[0].period },
-    { k: 'Primary language', v: 'Java', s: 'with Python, C, C++' },
-    { k: 'Based in', v: profile.location, s: 'India' },
+    { k: 'Now', v: 'BE, AI/ML Honours', s: `${education[0].score} · University of Mumbai` },
+    { k: 'Experience', v: `${experience[0].role}, ${experience[0].company}`, s: experience[0].period },
+    { k: 'Faster screening', v: '30m → <15s', s: 'CogniStream · COHERENCE winner' },
+    { k: 'Reach me', v: profile.phone, s: profile.email },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function About() {
         >
         <Tilt max={5} className="rounded-2xl">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10">
-            <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_30%,#5a0b1b,#14060a_60%,#07070a)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_30%,#0a4a7a,#04070d_60%,#07070a)]" />
             <div className="absolute inset-0 opacity-50 [background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.03)_0px,rgba(255,255,255,0.03)_1px,transparent_1px,transparent_28px)]" />
             <img
               src="/assets/portrait-720.webp"

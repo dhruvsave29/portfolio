@@ -38,15 +38,15 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
   const meta = [
     education[0].period.split(' – ')[0].split(' ')[1] + ' – Present',
-    'B.Tech AI & ML',
+    'BE AI/ML Honours',
     `${projects.length} Originals`,
     `${certifications.length} Certifications`,
   ];
 
   const floating = [
-    { text: education[0].score, sub: 'B.Tech AI & ML', pos: 'left-[2%] top-[30%]', depth: 1 },
+    { text: education[0].score, sub: 'BE AI/ML Honours', pos: 'left-[2%] top-[30%]', depth: 1 },
     { text: `${achievements[0].title}`, sub: achievements[0].org, pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'Java · React · Node.js', sub: 'Primary stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: 'Python · Next.js · FastAPI', sub: 'Primary stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (
@@ -62,7 +62,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
     >
       {/* atmosphere */}
       <motion.div aria-hidden className="absolute inset-0" style={{ x: glowX }}>
-        <div className="absolute right-[-10%] top-[-10%] h-[90vh] w-[80vw] rounded-full bg-[radial-gradient(closest-side,rgba(229,19,43,0.38),rgba(229,19,43,0.08)_55%,transparent)] blur-2xl lg:right-[-4%] lg:w-[60vw]" />
+        <div className="absolute right-[-10%] top-[-10%] h-[90vh] w-[80vw] rounded-full bg-[radial-gradient(closest-side,rgba(47,139,255,0.38),rgba(47,139,255,0.08)_55%,transparent)] blur-2xl lg:right-[-4%] lg:w-[60vw]" />
         <div className="absolute bottom-[-20%] left-[-10%] h-[70vh] w-[60vw] rounded-full bg-[radial-gradient(closest-side,rgba(90,20,120,0.25),transparent)] blur-2xl" />
       </motion.div>
       <Particles className="z-[1]" />
@@ -85,7 +85,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
           transition={{ duration: 1.6, ease: EASE, delay: 0.1 }}
         >
           {/* rim light ring */}
-          <div aria-hidden className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-crimson-2/20 shadow-[0_0_120px_rgba(229,19,43,0.35),inset_0_0_80px_rgba(229,19,43,0.18)]" />
+          <div aria-hidden className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-crimson-2/20 shadow-[0_0_120px_rgba(47,139,255,0.35),inset_0_0_80px_rgba(47,139,255,0.18)]" />
           <img
             src={profile.portrait.src}
             srcSet={profile.portrait.srcSet}
@@ -94,8 +94,8 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
             className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] [mask-image:linear-gradient(to_bottom,black_62%,transparent_97%)]"
           />
-          {/* crimson rim light on the image edge */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(255,61,90,0.16),transparent_70%)] mix-blend-screen" />
+          {/* rim light on the image edge */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(63,214,255,0.16),transparent_70%)] mix-blend-screen" />
 
           {/* floating UI chips */}
           {floating.map((f, i) => (
@@ -128,7 +128,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
         </motion.p>
 
         <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-mist">
-          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-bone">AI·ML</span>
+          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-bone">AI/ML</span>
           {meta.map((m, i) => (
             <span key={m} className="flex items-center gap-3">
               {i > 0 && <span className="h-1 w-1 rounded-full bg-smoke" />}

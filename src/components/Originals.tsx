@@ -18,12 +18,12 @@ export default function Originals({ onOpen }: { onOpen: (p: Project) => void }) 
 function Intro() {
   return (
     <div className="flex w-full shrink-0 flex-col justify-center lg:w-[34vw]">
-      <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-crimson-2">
-        <span className="h-px w-8 bg-crimson-2" /> {projects.length} Originals · {projects[0].year}
+          <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-crimson-2">
+        <span className="h-px w-8 bg-crimson-2" /> {projects.length} Originals · {projects[0].year} – {projects[1].year}
       </p>
       <RevealText as="h2" text="ORIGINALS" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-bone" />
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-mist">
-        Three productions from the resume — an AI platform, a payment gateway and a multi-tenant SaaS. Open any title for the full story.
+        Six productions from the resumes and repos — an AI clinical matcher, an offline Android aid, a Web3 marketplace and more. Open any title for the full story.
       </p>
       <p className="mt-6 hidden text-xs tracking-[0.24em] text-smoke lg:block">SCROLL TO BROWSE →</p>
     </div>
@@ -41,7 +41,7 @@ function Outro() {
     >
       <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 text-2xl text-bone transition group-hover:scale-110 group-hover:border-crimson-2 group-hover:text-crimson-2">↗</span>
       <span className="font-display text-3xl tracking-wide text-bone">More on GitHub</span>
-      <span className="text-xs text-mist">github.com/Sushmitadasari</span>
+      <span className="text-xs text-mist">github.com/{profile.links.github.replace('https://github.com/', '')}</span>
     </a>
   );
 }
@@ -77,7 +77,7 @@ function PinnedOriginals({ onOpen }: { onOpen: (p: Project) => void }) {
   return (
     <div ref={wrap} style={{ height: `calc(100vh + ${dist}px)` }} className="relative">
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
-        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(50%_60%_at_70%_50%,rgba(229,19,43,0.10),transparent_70%)]" />
+        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(50%_60%_at_70%_50%,rgba(47,139,255,0.10),transparent_70%)]" />
         <motion.div ref={track} style={{ x }} className="gutter relative flex items-center gap-8 pr-[12vw]" data-cursor="drag">
           <Intro />
           {projects.map((p, i) => (
