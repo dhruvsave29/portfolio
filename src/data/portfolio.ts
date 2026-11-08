@@ -7,7 +7,7 @@
 export type Palette = { from: string; via: string; to: string; accent: string };
 
 export const profile = {
-  fullName: 'Dhruv Vivek Save',
+  fullName: 'Dhruv Prashantkumar Save',
   displayName: 'Dhruv Save',
   firstName: 'DHRUV',
   seriesTag: 'THE SERIES',
