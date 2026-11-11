@@ -109,7 +109,7 @@ export const projects: Project[] = [
       { value: '30+', label: 'clinical trials matched' },
       { value: '100%', label: 'auditable eligibility decisions' },
     ],
-    github: 'https://github.com/Abhishek222983101/Paradigm-AlgoForge26',
+    github: 'https://github.com/dhruvsave29/cognistream',
     palette: { from: '#031527', via: '#0a4a7a', to: '#04070d', accent: '#3fd1ff' },
     motif: 'flow',
   },
@@ -267,7 +267,7 @@ export const achievements: Achievement[] = [
     org: 'COHERENCE Hackathon 2026',
     detail: 'Led CogniStream — an AI-powered clinical trial matching engine — for Team Paradigm.',
     laurel: 'Hackathon Winner',
-    link: 'https://github.com/Abhishek222983101/Paradigm-AlgoForge26',
+    link: 'https://github.com/dhruvsave29/cognistream',
   },
   {
     id: 'pec-hacks',
