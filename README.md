@@ -1,9 +1,22 @@
-# SUSHMITA — THE SERIES
+# DHRUV — THE SERIES
 
-A cinematic, streaming-inspired portfolio for **Dhruv Save**: Full-Stack Developer and BE Computer Engineering AI/ML Honours, University of Mumbai.
+A cinematic, streaming-inspired portfolio for **Dhruv Prashantkumar Save** — Software Developer from Mumbai.
+BE Computer Engineering with Honours in AI/ML, University of Mumbai (Vidyavardhini's College of Engineering and Technology, Class of 2026). Winner, COHERENCE Hackathon 2026.
+
 Every section is an episode, every project is an Original, and the whole site plays like a series.
 
+**Live:** [dhruvsavecc.vercel.app](https://dhruvsavecc.vercel.app) · [LinkedIn](https://www.linkedin.com/in/dhruvsave) · [GitHub](https://github.com/dhruvsave29)
+
 > A personal portfolio with a fictional streaming-platform look. It is not affiliated with Netflix or any other streaming service and uses none of their logos.
+
+## What's on the platform
+
+- **Originals** — six projects as titles: CogniStream (Winner, COHERENCE 2026 — clinical-trial screening in under 15 seconds), BrailleVision (offline on-device YOLOv8 text reader, registered with the Indian Copyright Office as "Sight Sense"), VAULT (Solana AI model marketplace, 42/42 automated tests), MediScript (local medical transcription with Whisper), Serenity (Top 10, PEC HACKS 2.0) and GamerStop (Firebase esports platform).
+- **Who's Watching?** — four viewing profiles (Dhruv / Recruiter / Full-Stack / AI·ML). Each one shows the same true story in a different order, depending on who's visiting.
+- **My Journey** — 5 seasons, 13 episodes: from HSC at Bhavan's College to the COHERENCE win and the copyright.
+- **Top Picks** — a Top-10 row of the strongest moments.
+- **Moments** — award-poster cards plus the certification rail (Infosys Python, Java, DSA, AI Engineer).
+- **The Full Story** — a designed resume sheet with view + download of the ML/AI resume PDF.
 
 ## Run it locally
 
@@ -27,18 +40,18 @@ The static site is written to `dist/` and can be deployed as-is to Vercel, Netli
 
 ## Updating the content
 
-**All content lives in one file: [`src/data/portfolio.ts`](src/data/portfolio.ts).** It was generated from the resume, and every component reads from it.
+**All content lives in one file: [`src/data/portfolio.ts`](src/data/portfolio.ts).** It was generated from the resumes, and every component reads from it.
 
 | To change… | Edit |
 | --- | --- |
-| Name, intro, email, LinkedIn, GitHub | `profile` |
+| Name, intro, phone, email, LinkedIn, GitHub | `profile` |
 | A project, or a new one | `projects` (add an object; it appears in Originals, the overlay, the resume sheet and the counts) |
 | Achievements / certifications | `achievements`, `certifications` |
 | Skills and their "where it's used" notes | `skillCategories`, `skillEvidence` |
 | Seasons and episodes (My Journey) | `seasons` |
 | Top 10 row | `topPicks` |
 | ▶ Play Intro highlight reel | `introSlides` |
-| Profile order (Recruiter / Developer / Creative) | `viewerProfiles` |
+| Profile order (Dhruv / Recruiter / Full-Stack / AI·ML) | `viewerProfiles` |
 | Opening studio card text | `profile.originalLabel` |
 
 **Resume:** replace `public/assets/Dhruv_Save_Resume.pdf`.
@@ -55,10 +68,10 @@ This rebuilds the responsive WebP portraits and the social share image in `publi
 
 ```
 src/
-  data/portfolio.ts        ← single source of truth (from the resume)
+  data/portfolio.ts        ← single source of truth (from the resumes + repos)
   App.tsx                  ← stages: opening → profile select → home; overlays
   components/
-    OpeningSequence        ← black → studio card → SUSHMITA → THE SERIES → portrait → ▶ PLAY
+    OpeningSequence        ← black → studio card → DHRUV → THE SERIES → portrait → ▶ PLAY
     ProfileSelector        ← "Who's watching?" (changes section order only)
     Navbar                 ← hide-on-scroll nav, profile switcher, mobile menu
     Hero                   ← billboard: parallax portrait, particles, light streaks, floating chips
@@ -72,13 +85,18 @@ src/
     Skills                 ← skill genres; each card shows where the skill appears
     Achievements           ← award-poster cards + certification rail (links to credentials)
     ResumeViewer/ResumeModal ← designed resume sheet, PDF viewer, download
-    FinalCTA               ← TO BE CONTINUED… + contact links
+    FinalCTA               ← TO BE CONTINUED… + contact links (email · phone · LinkedIn · GitHub)
     CustomCursor, fx.tsx   ← cursor states, magnetic buttons, 3D tilt, text reveals, particles
   hooks/                   ← Lenis smooth scroll + scroll lock, media queries, watch progress
 scripts/build-images.mjs   ← portrait/share-image pipeline (sharp)
 ```
 
 **Stack:** React 18, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion 11, Lenis.
+**Theme:** deep blue (#1866e8) + electric cyan (#4dd7ff) on ink black.
+
+## Deployment
+
+Hosted free on **Vercel** — [dhruvsavecc.vercel.app](https://dhruvsavecc.vercel.app), deployed from this repo.
 
 ## Accessibility and performance
 
@@ -86,7 +104,7 @@ scripts/build-images.mjs   ← portrait/share-image pipeline (sharp)
 - Hover effects only run on devices with a precise pointer. Touch devices get tap interactions and native swipe rails.
 - The custom cursor appears only with a mouse or trackpad.
 - Overlays close with Esc, and the highlight reel supports Space and the ← → keys.
-- Portraits are responsive WebP files (25–90 KB). Overlays are code-split, and particles pause when they're off screen.
+- Portraits are responsive WebP files. Overlays are code-split, and particles pause when they're off screen.
 
 ## Keyboard shortcuts
 
